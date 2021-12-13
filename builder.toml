@@ -1,7 +1,7 @@
 description = "Ubuntu bionic base image with no buildpacks included. To use, specify buildpacks at build time."
 
 [lifecycle]
-  version = "0.13.1"
+  version = "0.13.2"
 
 [stack]
   build-image = "docker.io/paketobuildpacks/build:1.1.38-base-cnb"
