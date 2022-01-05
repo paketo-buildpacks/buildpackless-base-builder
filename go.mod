@@ -7,7 +7,7 @@ require (
 	github.com/google/go-cmp v0.5.6 // indirect
 	github.com/kr/pretty v0.3.0 // indirect
 	github.com/onsi/gomega v1.17.0
-	github.com/paketo-buildpacks/occam v0.2.1
+	github.com/paketo-buildpacks/occam v0.3.0
 	github.com/rogpeppe/go-internal v1.8.0 // indirect
 	github.com/sclevine/spec v1.4.0
 	golang.org/x/sys v0.0.0-20210823070655-63515b42dcdf // indirect
