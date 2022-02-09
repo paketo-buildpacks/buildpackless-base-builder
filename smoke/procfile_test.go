@@ -56,10 +56,9 @@ func testProcfile(t *testing.T, context spec.G, it spec.S) {
 
 			var logs fmt.Stringer
 			image, logs, err = pack.Build.
-				WithPullPolicy("never").
 				WithBuilder(Builder).
 				WithBuildpacks(
-					procfileBuildpack,
+					config.Procfile,
 				).
 				Execute(name, source)
 			Expect(err).ToNot(HaveOccurred(), logs.String)
