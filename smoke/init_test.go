@@ -7,7 +7,6 @@ import (
 	"testing"
 	"time"
 
-	"github.com/paketo-buildpacks/occam"
 	"github.com/sclevine/spec"
 	"github.com/sclevine/spec/report"
 
@@ -15,8 +14,7 @@ import (
 )
 
 var (
-	Builder           string
-	procfileBuildpack string
+	Builder string
 
 	config struct {
 		Procfile string `json:"procfile"`
@@ -41,11 +39,6 @@ func TestSmoke(t *testing.T) {
 
 	Expect(json.NewDecoder(file).Decode(&config)).To(Succeed())
 	Expect(file.Close()).To(Succeed())
-
-	buildpackStore := occam.NewBuildpackStore()
-
-	procfileBuildpack, err = buildpackStore.Get.Execute(config.Procfile)
-	Expect(err).NotTo(HaveOccurred())
 
 	suite := spec.New("Buildpackless Smoke", spec.Parallel(), spec.Report(report.Terminal{}))
 	suite("Procfile", testProcfile)
