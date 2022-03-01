@@ -7,6 +7,7 @@ import (
 	"testing"
 	"time"
 
+	"github.com/paketo-buildpacks/occam"
 	"github.com/sclevine/spec"
 	"github.com/sclevine/spec/report"
 
@@ -39,6 +40,8 @@ func TestSmoke(t *testing.T) {
 
 	Expect(json.NewDecoder(file).Decode(&config)).To(Succeed())
 	Expect(file.Close()).To(Succeed())
+
+	Expect(occam.NewDocker().Pull.Execute(config.Procfile))
 
 	suite := spec.New("Buildpackless Smoke", spec.Parallel(), spec.Report(report.Terminal{}))
 	suite("Procfile", testProcfile)
