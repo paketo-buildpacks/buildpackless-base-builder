@@ -1,5 +1,11 @@
 # Paketo Buildpackless Base Builder
 
+## ⚠️ This repository is archived. No further releases will be made! ⚠️
+
+## Use the [Paketo Jammy Base Buildpackless Builder](https://github.com/paketo-buildpacks/builder-jammy-buildpackless-base) instead.
+
+---
+
 ## `paketobuildpacks/builder:buildpackless-base`
 
 This builder uses the [Paketo Base Stack](https://github.com/paketo-buildpacks/base-stack-release) (an Ubuntu bionic base image)
